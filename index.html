@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ELEGANT BARBERSHOP</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>ELEGANT</h2>
+
+        <p>BARBERSHOP</p>
+
+    </header>
+
+    <main>
+    <div class="hero-content">
+        <p class="subtitle">PREMIUM BARBERSHOP</p>
+
+        <h1>
+            ТВОЙ СТИЛЬ.
+
+            ТВОИ ПРАВИЛА.
+        </h1>
+
+        <p class="description">
+            Мужские стрижки и безупречный стиль.
+        </p>
+
+       <button type="button" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+    ЗАПИСАТЬСЯ НА СТРИЖКУ
+</button>
+    </div>
+</main>
+<section class="services">
+    <h2>НАШИ УСЛУГИ</h2>
+    <p class="subtitle">Профессиональный уход и безупречный стиль</p>
+
+    <div class="service-list">
+        <div class="service">
+            <h3>Мужская стрижка</h3>
+            <p>Классика и современные образы</p>
+            <span>от 1500 ₽</span>
+        </div>
+
+        <div class="service">
+            <h3>Оформление бороды</h3>
+            <p>Чёткие линии и аккуратная форма</p>
+            <span>от 800 ₽</span>
+        </div>
+
+        <div class="service">
+            <h3>Комплекс</h3>
+            <p>Стрижка и оформление бороды</p>
+            <span>от 2000 ₽</span>
+        </div>
+    </div>
+</section>
+<section class="portfolio">
+    <h2>НАШИ РАБОТЫ</h2>
+    <img src="images/works.jpg.jpg" alt="Работы ELEGANT BARBERSHOP">
+</section>
+<section class="booking" id="booking">
+    <h2>ЗАПИСЬ ОНЛАЙН</h2>
+    <p>Выбери удобное время и запишись к нашему мастеру</p>
+
+   <form onsubmit="sendWhatsApp(event)">
+        <input type="text" placeholder="Твоё имя" required>
+        <input type="tel" placeholder="Номер телефона" required>
+
+        <select required>
+            <option value="">Выбери услугу</option>
+            <option>Мужская стрижка</option>
+            <option>Оформление бороды</option>
+            <option>Комплекс</option>
+        </select>
+
+        <input type="date" required>
+        <input type="time" required>
+
+        <button type="submit">ЗАПИСАТЬСЯ</button>
+    </form>
+</section>
+<script>
+function sendWhatsApp(event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const name = form.querySelector('input[type="text"]').value;
+    const phone = form.querySelector('input[type="tel"]').value;
+    const service = form.querySelector('select').value;
+    const date = form.querySelector('input[type="date"]').value;
+    const time = form.querySelector('input[type="time"]').value;
+
+    const message =
+        "Здравствуйте! Хочу записаться в ELEGANT BARBERSHOP.\n" +
+        "Имя: " + name + "\n" +
+        "Телефон: " + phone + "\n" +
+        "Услуга: " + service + "\n" +
+        "Дата: " + date + "\n" +
+        "Время: " + time;
+
+    const barberPhone = "77471602796";
+
+    const whatsappURL =
+        "https://wa.me/" + barberPhone +
+        "?text=" + encodeURIComponent(message);
+
+    window.location.href = whatsappURL;
+}
+</script>

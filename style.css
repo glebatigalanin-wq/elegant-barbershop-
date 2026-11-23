@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 30px 8%;
+    border-bottom: 1px solid #b89553;
+}
+
+header h2 {
+    color: #c9a45c;
+    letter-spacing: 5px;
+    font-size: 28px;
+}
+
+header p {
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+main {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.8)
+    ),
+    url("images/barber.jpg.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+main h1 {
+    font-size: 55px;
+    color: #d0ad70;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+main p {
+    color: #bbbbbb;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+button {
+    background: #c9a45c;
+    color: #111;
+    border: none;
+    padding: 16px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: white;
+}
+.services {
+    padding: 80px 10%;
+    text-align: center;
+    background: #151515;
+}
+
+.services h2 {
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: #202020;
+    border: 1px solid #8f7428;
+    padding: 35px 25px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.service h3 {
+    color: #d4af37;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.service span {
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: bold;
+}
+.button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #d4af37, #f5d76e);
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #fff;
+    color: #111;
+    transform: scale(1.05);
+}
+.portfolio {
+    padding: 80px 8%;
+    text-align: center;
+    background: #101010;
+}
+
+.portfolio h2 {
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
+
+.portfolio img {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+.booking {
+    padding: 80px 20px;
+    background: #151515;
+    text-align: center;
+}
+
+.booking h2 {
+    color: #d4af37;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.booking p {
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.booking form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking input,
+.booking select {
+    padding: 15px;
+    background: #222;
+    border: 1px solid #8f7428;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+.booking button {
+    padding: 16px;
+    background: #d4af37;
+    color: #111;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking button:hover {
+    background: white;
+}
